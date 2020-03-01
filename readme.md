@@ -78,3 +78,11 @@ const {
 **Array.leaveOne()** => Randomly eliminates all but one element from array and returns a superArray of removed elements
 
 **Array.leaveSome(number)** => Randomly eliminates all but a defined number of elements from array and returns a superArray of removed elements
+
+**Array.findRemove(value)** => finds and removes value from array returning the removed value
+
+**Array.addLength(length, value)** => increases array to desired length and fills in additional spots with the value passed.
+
+**Array.lessLengthRight(length)** => removes elements from back of the array till is desired length, returns array of removed values
+
+**Array.lessLengthRight(length)** => removes elements from front of the array till is desired length, returns array of removed values

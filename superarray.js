@@ -61,6 +61,33 @@ const superArray = () => {
         }
         return newArray;
     };
+
+    Array.prototype.findRemove = function(value) {
+        return this.splice(this.findIndex((val) => val === value), 1);
+    };
+
+    Array.prototype.addLength = function(length, value) {
+        while (this.length < length) {
+            this.push(value);
+        }
+        return this;
+    };
+
+    Array.prototype.lessLengthRight = function(length) {
+        const removed = [];
+        while (this.length > length) {
+            removed.push(this.pop());
+        }
+        return removed;
+    };
+
+    Array.prototype.lessLengthLeft = function(length) {
+        const removed = [];
+        while (this.length > length) {
+            removed.push(this.shift());
+        }
+        return removed;
+    };
 };
 
 module.exports = {
