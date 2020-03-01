@@ -23,7 +23,7 @@ const superArray = () => {
     Array.prototype.random = function() {
         const randomIndex = Math.floor(Math.random() * this.length);
 
-        const RandomValue = arr[randomIndex];
+        const RandomValue = this[randomIndex];
         return RandomValue;
     };
 
