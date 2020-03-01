@@ -6,11 +6,46 @@
 
 This library contain some utility functions.
 
+### installation
+
+#### NPM
+
+npm i mercedutils
+
+```
+const {superArray, utils} = require("mercedutils")
+
+superArray(); //add methods to array prototype
+
+const {
+    randomIndex,
+    randomRange,
+    randomNumber,
+    eliminateDupes
+} = utils() // makes these utility functions available
+```
+
+#### Github
+
+git clone https://github.com/AlexMercedCoder/JS_Utilities.git
+
+```
+const {superArray, utils} = require("superArray.js")
+
+superArray(); //add methods to array prototype
+
+const {
+    randomIndex,
+    randomRange,
+    randomNumber,
+    eliminateDupes
+} = utils() // makes these utility functions available
+
+```
+
 ---
 
 ### utility.js
-
-#### const util = require('./utility')
 
 ---
 
@@ -25,8 +60,6 @@ This library contain some utility functions.
 ---
 
 ### superarray.js
-
-#### const {superArray} = require('./superarray')
 
 ---
 

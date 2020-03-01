@@ -3,7 +3,21 @@
 //Created by Alex Merced
 ////////////////////////////////
 
-const util = require('./utility');
+const {
+    randomIndex,
+    randomRange,
+    randomNumber,
+    eliminateDupes
+} = require('./utility');
+
+const utils = () => {
+    return {
+        randomIndex,
+        randomRange,
+        randomNumber,
+        eliminateDupes
+    };
+};
 
 const superArray = () => {
     Array.prototype.random = function() {
@@ -29,7 +43,7 @@ const superArray = () => {
     };
 
     Array.prototype.randElim = function() {
-        return this.splice(util.randomIndex(this), 1);
+        return this.splice(randomIndex(this), 1);
     };
 
     Array.prototype.leaveOne = function() {
@@ -50,5 +64,6 @@ const superArray = () => {
 };
 
 module.exports = {
-    superArray
+    superArray,
+    utils
 };
