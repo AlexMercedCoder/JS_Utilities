@@ -10,19 +10,23 @@ This library contain some utility functions.
 
 ### utility.js
 
+#### const util = require('./utility')
+
 ---
 
-**randomIndex(Array) =>** Return random number 0 - Array.length
+**util.randomIndex(Array) =>** Return random number 0 - Array.length
 
-**randomRange (Low, High) =>** Return number between low and high
+**util.randomRange (Low, High) =>** Return number between low and high
 
-**randomNumber(Number) =>** Return random number 0 - Number
+**util.randomNumber(Number) =>** Return random number 0 - Number
 
-**eliminateDupes(Array) =>** Return Array with duplicates removed
+**util.eliminateDupes(Array) =>** Return Array with duplicates removed
 
 ---
 
 ### superarray.js
+
+#### const {superArray} = require('./superarray')
 
 ---
 
