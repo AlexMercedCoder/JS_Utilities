@@ -69,7 +69,7 @@ const {
 
 **Array.random() =>** return random element from array
 
-**Array.remove((value, index) =>** return boolean) => the opposite of filter, remove elements where the callback function returns true, returns a superArray
+**Array.remove((value, index) => return boolean)** => the opposite of filter, remove elements where the callback function returns true, returns a superArray
 
 **Array.undupe() =>** returns a superArray of the array with duplicates removed
 
@@ -86,3 +86,9 @@ const {
 **Array.lessLengthRight(length)** => removes elements from back of the array till is desired length, returns array of removed values
 
 **Array.lessLengthRight(length)** => removes elements from front of the array till is desired length, returns array of removed values
+
+**Array.someMore(length)** => removes elements from front of the array till is desired length, returns array of removed values
+
+**Array.someMore((value, index) => return boolean, number)** => returns true if the number of iterations that return true are equal or greater to the number argument
+
+**Array.everyLess((value, index) => return boolean, number)** => returns true if the number of iterations that return false are equal or less to the number argument

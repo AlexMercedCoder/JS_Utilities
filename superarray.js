@@ -88,6 +88,16 @@ const superArray = () => {
         }
         return removed;
     };
+
+    Array.prototype.someMore = function(callback, number) {
+        let counter = this.filter(callback).length;
+        return counter >= number;
+    };
+
+    Array.prototype.everyLess = function(callback, number) {
+        let counter = this.remove(callback).length;
+        return counter <= number;
+    };
 };
 
 module.exports = {
