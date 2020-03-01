@@ -13,7 +13,7 @@ const randomIndex = (arr) => {
 
 const randomRange = (low, high) => {
     let num = low - 1;
-    while (num < low && num > high) {
+    while (num < low || num > high) {
         num = randomNumber(high);
     }
     return num;

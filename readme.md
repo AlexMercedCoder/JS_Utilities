@@ -87,8 +87,6 @@ const {
 
 **Array.lessLengthRight(length)** => removes elements from front of the array till is desired length, returns array of removed values
 
-**Array.someMore(length)** => removes elements from front of the array till is desired length, returns array of removed values
-
 **Array.someMore((value, index) => return boolean, number)** => returns true if the number of iterations that return true are equal or greater to the number argument
 
 **Array.everyLess((value, index) => return boolean, number)** => returns true if the number of iterations that return false are equal or less to the number argument
