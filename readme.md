@@ -30,7 +30,7 @@ This library contain some utility functions.
 
 ---
 
-**superArray(Array) =>** return array with the methods below added
+**superArray() =>** run this function and going forward all the below methods will be available to all your arrays
 
 ---
 
@@ -39,3 +39,9 @@ This library contain some utility functions.
 **Array.remove((value, index) =>** return boolean) => the opposite of filter, remove elements where the callback function returns true, returns a superArray
 
 **Array.undupe() =>** returns a superArray of the array with duplicates removed
+
+**Array.randElim() =>** eliminates a random element and returns it
+
+**Array.leaveOne()** => Randomly eliminates all but one element from array and returns a superArray of removed elements
+
+**Array.leaveSome(number)** => Randomly eliminates all but a defined number of elements from array and returns a superArray of removed elements
