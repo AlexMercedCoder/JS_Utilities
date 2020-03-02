@@ -22,7 +22,8 @@ const {
     randomRange,
     randomNumber,
     eliminateDupes,
-    Fetcher
+    Fetcher,
+    SuperSet
 } = utils() // makes these utility functions available
 ```
 
@@ -40,7 +41,8 @@ const {
     randomRange,
     randomNumber,
     eliminateDupes,
-    Fetcher
+    Fetcher,
+    SuperSet
 } = utils() // makes these utility functions available
 
 ```
