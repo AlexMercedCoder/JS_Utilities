@@ -9,7 +9,9 @@ const {
     randomNumber,
     eliminateDupes,
     Fetcher,
-    PowerSet
+    PowerSet,
+    countWords,
+    highWordCount
 } = require('./utility');
 
 const utils = () => {
@@ -19,7 +21,9 @@ const utils = () => {
         randomNumber,
         eliminateDupes,
         Fetcher,
-        PowerSet
+        PowerSet,
+        countWords,
+        highWordCount
     };
 };
 

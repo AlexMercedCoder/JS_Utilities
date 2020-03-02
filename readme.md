@@ -42,7 +42,9 @@ const {
     randomNumber,
     eliminateDupes,
     Fetcher,
-    SuperSet
+    SuperSet,
+    countWords,
+    highWordCount
 } = utils() // makes these utility functions available
 
 ```
@@ -113,15 +115,17 @@ const {
 
 ---
 
-**util.randomIndex(Array) =>** Return random number 0 - Array.length
+**randomIndex(Array) =>** Return random number 0 - Array.length
 
-**util.randomRange (Low, High) =>** Return number between low and high
+**randomRange (Low, High) =>** Return number between low and high
 
-**util.randomNumber(Number) =>** Return random number 0 - Number
+**randomNumber(Number) =>** Return random number 0 - Number
 
-**util.eliminateDupes(Array) =>** Return Array with duplicates removed
+**eliminateDupes(Array) =>** Return Array with duplicates removed
 
----
+**countWords(String) =>** returns object of words in string and their word count
+
+**highWordCount(string) =>** returns array with most used word and count in a string
 
 ### Fetcher
 

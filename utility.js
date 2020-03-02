@@ -25,6 +25,25 @@ const eliminateDupes = (arr) => {
     return [...new Set(arr)];
 };
 
+const countWords = (string) => {
+    const newObj = {};
+    const stringArray = string.split(' ');
+    for (word of stringArray) {
+        newObj[word] = stringArray.filter((value) => value === word).length;
+    }
+    return newObj;
+};
+
+const highWordCount = (string) => {
+    const stringObj = countWords(string);
+    const objKeys = Object.keys(stringObj);
+    const objValues = Object.values(stringObj);
+    const index = objValues.findIndex(
+        (value) => value === [...objValues].sort()[objValues.length - 1]
+    );
+    return [objKeys[index], objValues[index]];
+};
+
 /////////////////
 //Fetcher class
 //Purpose: Api fetching Utility
@@ -117,5 +136,7 @@ module.exports = {
     randomNumber,
     eliminateDupes,
     Fetcher,
-    PowerSet
+    PowerSet,
+    countWords,
+    highWordCount
 };
