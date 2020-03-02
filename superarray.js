@@ -100,6 +100,44 @@ const superArray = () => {
         let counter = this.remove(callback).length;
         return counter <= number;
     };
+
+    Array.prototype.mapToObject = function(callback) {
+        const newObj = {};
+        for (i = 0; i < this.length; i++) {
+            const propToBe = callback(this[i], i);
+            if (propToBe instanceof Array && propToBe.length >= 2) {
+                newObj[propToBe[0]] = propToBe[1];
+            }
+        }
+        return newObj;
+    };
+
+    Array.prototype.mapToMap = function(callback) {
+        const newMap = new Map();
+        for (i = 0; i < this.length; i++) {
+            const propToBe = callback(this[i], i);
+            if (propToBe instanceof Array && propToBe.length >= 2) {
+                newMap.set(propToBe[0], propToBe[1]);
+            }
+        }
+        return newMap;
+    };
+
+    Array.prototype.mapToSet = function(callback) {
+        const newSet = [];
+        for (i = 0; i < this.length; i++) {
+            newSet.push(callback(this[i], i));
+        }
+        return new Set(newSet);
+    };
+
+    Array.prototype.mapToUnique = function(callback) {
+        const newSet = [];
+        for (i = 0; i < this.length; i++) {
+            newSet.push(callback(this[i], i));
+        }
+        return [...new Set(newSet)];
+    };
 };
 
 module.exports = {

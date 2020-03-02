@@ -79,6 +79,14 @@ const {
 
 **Array.everyLess((value, index) => return boolean, number)** => returns true if the number of iterations that return false are equal or less to the number argument
 
+**Array.MapToObject((value, index) => return [key, value])** => like map but returns an object, the callback function must return a two element array [key, value]
+
+**Array.MapToMap((value, index) => return [key, value])** => like map but returns an Map, the callback function must return a two element array [key, value]
+
+**Array.MapToMap((value, index) => return [key, value])** => like map but returns a Set
+
+**Array.MapToUnique((value, index) => return [key, value])** => like map but returns an Array of only unique elements
+
 ---
 
 ### Utility Functions
