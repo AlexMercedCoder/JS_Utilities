@@ -16,5 +16,8 @@
     "bugs": {
         "url": "https://github.com/AlexMercedCoder/JS_Utilities/issues"
     },
-    "homepage": "https://github.com/AlexMercedCoder/JS_Utilities#readme"
+    "homepage": "https://github.com/AlexMercedCoder/JS_Utilities#readme",
+    "dependencies": {
+        "node-fetch": "^2.6.0"
+    }
 }

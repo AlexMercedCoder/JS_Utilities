@@ -7,7 +7,8 @@ const {
     randomIndex,
     randomRange,
     randomNumber,
-    eliminateDupes
+    eliminateDupes,
+    Fetcher
 } = require('./utility');
 
 const utils = () => {
@@ -15,7 +16,8 @@ const utils = () => {
         randomIndex,
         randomRange,
         randomNumber,
-        eliminateDupes
+        eliminateDupes,
+        Fetcher
     };
 };
 
