@@ -147,6 +147,58 @@ const superArray = () => {
         removedValues.push(this.pop());
         return removedValues;
     };
+
+    Array.prototype.shuff = function() {
+        const original = [...this];
+        const shuffled = [];
+        for (i = 0; i < this.length; i++) {
+            shuffled.push(original.randElim());
+        }
+
+        return shuffled.flat();
+    };
+
+    Array.prototype.toStrings = function() {
+        return this.map((value) => String(value));
+    };
+
+    Array.prototype.toNums = function() {
+        return this.map((value) => Number(value));
+    };
+
+    Array.prototype.toBools = function() {
+        return this.map((value) => Boolean(value));
+    };
+
+    Array.prototype.iPop = function() {
+        const newArr = [...this];
+        newArr.pop();
+        return newArr;
+    };
+
+    Array.prototype.iShift = function() {
+        const newArr = [...this];
+        newArr.shift();
+        return newArr;
+    };
+
+    Array.prototype.iPush = function(value) {
+        const newArr = [...this];
+        newArr.push(value);
+        return newArr;
+    };
+
+    Array.prototype.iUnshift = function(value) {
+        const newArr = [...this];
+        newArr.unshift(value);
+        return newArr;
+    };
+
+    Array.prototype.iSplice = function(index, amount) {
+        const newArr = [...this];
+        newArr.splice(index, amount);
+        return newArr;
+    };
 };
 
 module.exports = {

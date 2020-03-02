@@ -89,7 +89,23 @@ const {
 
 **Array.squish()** => removes the first and last elements of the array and return them in an array
 
----
+**Array.shuff()** => return shuffled version of array
+
+**Array.toStrings()** => return array with all elements casted as strings
+
+**Array.toNums()** => return array with all elements casted as Numbers
+
+**Array.toBools()** => return array with all elements casted as Booleans
+
+**Array.iPop()** => immutable pop, return new version of array with last value popped
+
+**Array.iPush(value)** => immutable push, return new version of array with value pushed into end of array
+
+**Array.iShift()** => immutable shift, return new version of array with first value removed
+
+**Array.iUnshift(value)** => immutable unshift, return new version of array with value added at beginning of array
+
+**Array.iSplice(index, amount)** => immutable splice, return new version of array with the specified number of elements removed starting with the specified index.
 
 ### Utility Functions
 
