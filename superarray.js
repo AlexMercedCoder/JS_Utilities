@@ -8,7 +8,8 @@ const {
     randomRange,
     randomNumber,
     eliminateDupes,
-    Fetcher
+    Fetcher,
+    PowerSet
 } = require('./utility');
 
 const utils = () => {
@@ -17,7 +18,8 @@ const utils = () => {
         randomRange,
         randomNumber,
         eliminateDupes,
-        Fetcher
+        Fetcher,
+        PowerSet
     };
 };
 
@@ -137,6 +139,13 @@ const superArray = () => {
             newSet.push(callback(this[i], i));
         }
         return [...new Set(newSet)];
+    };
+
+    Array.prototype.squish = function() {
+        const removedValues = [];
+        removedValues.push(this.shift());
+        removedValues.push(this.pop());
+        return removedValues;
     };
 };
 

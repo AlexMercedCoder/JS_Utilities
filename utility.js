@@ -47,10 +47,75 @@ class Fetcher {
     };
 }
 
+/////////////////
+//PowerSet
+//Purpose: Leveraging the benefits of sets and arrays
+/////////////////
+
+class PowerSet {
+    constructor(arr) {
+        this.arr = [...new Set(arr)];
+        this.set = new Set(arr);
+    }
+
+    arrMeth(method, argument) {
+        const result = eval(`this.arr.${method}(${argument})`);
+        this.arr = [...new Set(this.arr)];
+        this.set = new Set(this.arr);
+        return result;
+    }
+
+    isSuperset(subset) {
+        for (let elem of subset.set) {
+            if (!this.set.has(elem)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    union(setB) {
+        return new PowerSet([...this.set, ...setB.set]);
+    }
+
+    intersection(setB) {
+        let _intersection = new Set();
+        for (let elem of setB.set) {
+            if (this.set.has(elem)) {
+                _intersection.add(elem);
+            }
+        }
+        return new PowerSet([..._intersection]);
+    }
+
+    symmetricDifference(setB) {
+        let _difference = new Set(this.set);
+        for (let elem of setB.set) {
+            if (_difference.has(elem)) {
+                _difference.delete(elem);
+            } else {
+                _difference.add(elem);
+            }
+        }
+        return new PowerSet([..._difference]);
+    }
+
+    difference(setB) {
+        let _difference = new Set(this.set);
+        for (let elem of setB.set) {
+            _difference.delete(elem);
+        }
+        return new PowerSet([..._difference]);
+    }
+}
+
+//////EXPORT
+
 module.exports = {
     randomIndex,
     randomRange,
     randomNumber,
     eliminateDupes,
-    Fetcher
+    Fetcher,
+    PowerSet
 };
