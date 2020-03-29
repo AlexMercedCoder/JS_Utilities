@@ -8,14 +8,17 @@ This library contain some utility functions.
 
 ### installation
 
+CDN LINK: http://www.alexmercedcoder.com/mercedutils.js
+
 #### NPM
 
-npm i mercedutils
+npm i @alexmerced/bettertypes
 
 ```
-const {superArray, utils} = require("mercedutils")
+const {superArray, utils, superString} = require("mercedutils")
 
 superArray(); //add methods to array prototype
+superString(); //add methods to string prototype
 
 const {
     randomIndex,
@@ -32,9 +35,10 @@ const {
 git clone https://github.com/AlexMercedCoder/JS_Utilities.git
 
 ```
-const {superArray, utils} = require("superArray.js")
+const {superArray, utils, superString} = require("superArray.js")
 
 superArray(); //add methods to array prototype
+superString(); //add methods to string prototype
 
 const {
     randomIndex,
@@ -110,6 +114,24 @@ const {
 **Array.iUnshift(value)** => immutable unshift, return new version of array with value added at beginning of array
 
 **Array.iSplice(index, amount)** => immutable splice, return new version of array with the specified number of elements removed starting with the specified index.
+
+---
+
+### superString
+
+---
+
+**superString() =>** run this function and going forward all the below methods will be available to all your strings
+
+---
+
+**String.words() =>** returns array of words in the string
+
+**String.reverseWords() =>** returns string with the words reversed
+
+**String.swapWord(target, replacement) =>** returns string where the first instance of the target word is replaced by the replacement.
+
+---
 
 ### Utility Functions
 
